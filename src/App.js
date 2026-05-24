@@ -6,6 +6,7 @@ import Video from './pages/Video/video';
 import { useState } from 'react';
 import {Route,Routes} from 'react-router-dom';
 import Profile from './pages/Profile/profile';
+import VideoUpload from './pages/VideoUpload/videoUpload';
 function App() {
   const [sideNavbar,setSideNavbar] = useState(true);
 
@@ -19,6 +20,7 @@ function App() {
       <Route path='/' element={<Home sideNavbar={sideNavbar} />} />
       <Route path='/watch/:id' element={<Video />} />
       <Route path='/user/:id' element={<Profile sideNavbar={sideNavbar} />} />
+      <Route path='/:id/upload' element={<VideoUpload />} />
      </Routes>
      
 
